@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=, initial-scale=1.0">
+<title>Pagina de Login do vitão</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="main">
+<div class="container"><!-- Div Class pode ser adicionada varios elementos-->
+<div id="square"> <!-- Div ID só pode ser aplicado a um elemento html, Tem maior prioridade que o div class se aplicados no mesmo elemento-->
+<!-- Exemplo: No index2.html
+    <div class="red-background" id="blue-background">Ola</div> O que será exibido será o fundo azul e não vermelho -->
+<!-- Victor Melo Homem-->
+<!-- Para não poluir esse código, a maioria das definições das funções estará no index3.html-->
+<div class="front">
+<h1>Login</h1>
+<form action="#" method="post">
+<input required
+type="email"
+name="email"
+id="email"
+placeholder="Email"> <!--Placeholder ja coloca uma caixinha, input e pra inserir algo e n leva tag de fechamento só >, tipo, nome, id pra banco-->
+
+<input required
+type="password" 
+name="password" 
+id="password" 
+placeholder="Senha"> 
+<button type="submit">Enviar</button>
+</form>
+
+ </div>
+ <div class="right">
+    <h1>Criar uma nova conta</h1>
+    <form action="#" method="post">
+    <input required
+    type="email"
+     name="email"
+     id="email"
+     placeholder="Email"> 
+    <input required
+    type="text"
+     name="fullName"
+     id="fullName"
+     placeholder="NomeCompleto"> 
+    <input required
+    type="password"
+     name="password"
+     id="password"
+     placeholder="Senha"> 
+   
+    <button type="submit">Enviar</button>
+
+    </form>
+     </div>
+     <div class="left">
+        <h1>Insira seu E-mail para resetar sua senha</h1>
+        <form action="#" method="post">
+        <input required
+        type="email"
+         name="email"
+         id="email"
+         placeholder="Email"> 
+        <button type="submit">Enviar</button>
+        </form>
+         </div>         
+</div>
+<div class="actions">
+<button id="leftSide" type="button"> Esqueci senha </button>
+<button id="frontSide" type="button"> Login </button>
+<button id="rightSide" type="button"> Registrar </button>
+</div>
+</div>
+ </div>
+ <script>
+const square = document.getElementById("square"); /* Agnt declara a variável como constante, o nome dela em seguida(square) e atribui ela (=) 
+ Document(Quando o navegador le o script ele sempre começa acessando o documento) que vai pegar o elemento por id com o nome de square atribuido lá em cima*/
+const frontSide = document.getElementById("frontSide");
+const leftSide = document.getElementById("leftSide");
+const rightSide = document.getElementById("rightSide");
+
+frontSide.addEventListener('click', () => { 
+    frontSide.style.display ="none";
+    leftSide.style.display ="block";
+    rightSide.style.display ="block";
+    square.style.transform ="rotate3d(0,0,0,90deg)";
+    document.title ="Pagina de login";
+})
+rightSide.addEventListener('click', () => { 
+    frontSide.style.display ="block";
+    leftSide.style.display ="block";
+    rightSide.style.display ="none";
+    square.style.transform ="rotate3d(0,-1,0,90deg)";
+    document.title ="Pagina de registro";
+})
+leftSide.addEventListener('click', () => { 
+    frontSide.style.display ="block";
+    leftSide.style.display ="none";
+    rightSide.style.display ="block";
+    square.style.transform ="rotate3d(0,1,0,90deg)";
+    document.title ="Esqueci a minha senha";
+})
+ </script>
+</body>
+</html>

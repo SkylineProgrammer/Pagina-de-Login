@@ -1,0 +1,125 @@
+*{
+margin: 0;
+padding: 0;
+}
+.body{
+    font-family: "Poppins", sans-serif;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    color: aquamarine;
+    align-items: center;
+    background-image: url(https://assetsio.reedpopcdn.com/final16.png?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.container{
+ width: 100%;
+ height: 100%;
+ display: flex;
+ margin: 0%auto;
+ border-radius: 5px 100px;
+ align-items: center;
+ flex-direction: column;
+ justify-content: center;
+
+}
+#square{
+    display: flex;
+    min-width: 300px;
+    min-height: 300px;
+    margin-bottom: 100px;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all .3s ease-in;
+    box-shadow: 3px 3px 5px rgb(64, 216, 17);
+
+}
+.front,
+.right,
+.left{
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    border-radius: 5px;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(0, 68, 255);
+    box-shadow: 3px 3px 5px rgb(0, 47, 255);
+}
+.front{
+    transform: translateZ(50px);
+}
+.right{
+    transform: rotateY(90deg) translateZ(50px);
+}
+.left{
+    transform: rotateY(-90deg) translateZ(50px);
+}
+.actions button {
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    min-height: 30px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: rgb(0, 255, 255);
+  }
+  .container h1{
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .container form input,
+  .container form button{
+margin-bottom: 15px;
+  }
+  .container form input{
+    border: 0;
+    font-size: 20px;
+    min-height: 30px;
+    padding: 10px 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .container form button{
+    border: 0;
+    padding: 10px 0;
+    outline: none;
+    min-height: 30px;
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: rgb(253, 30, 30);
+
+  }
+  #frontside{
+    display: none;
+  }
+  .container .actions {
+    display: flex;
+    justify-content: center;
+  }
+  .container .actions button{
+    margin-right: 10px;
+  }
+  @media(min-width: 600px){
+    .container{
+        width: 500px;
+        height: 500px;
+        padding: 50px 100px;
+        background-image: url(https://hypandogames.com.br/wp-content/uploads/2023/06/img_6881-1024x576.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+  }
